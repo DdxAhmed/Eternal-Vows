@@ -20,13 +20,13 @@ function Invitation() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#fbf6ec] via-[#f9efe0] to-[#fdf5e6]">
       <div className="pointer-events-none fixed inset-0">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#f4d98a]/20 blur-3xl" />
-        <div className="absolute bottom-1/4 -left-40 h-[500px] w-[500px] rounded-full bg-[#f1c6c9]/25 blur-3xl" />
-        <div className="absolute top-1/2 -right-40 h-[500px] w-[500px] rounded-full bg-[#fff4d6]/40 blur-3xl" />
+        <div className="absolute top-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-[#f4d98a]/15 blur-2xl" />
+        <div className="absolute bottom-1/4 -left-40 h-[350px] w-[350px] rounded-full bg-[#f1c6c9]/18 blur-2xl" />
+        <div className="absolute top-1/2 -right-40 h-[350px] w-[350px] rounded-full bg-[#fff4d6]/30 blur-2xl" />
       </div>
 
-      <div className="fixed inset-0 floral-bg opacity-60 pointer-events-none" />
-      <Particles count={25} />
+      <div className="fixed inset-0 floral-bg opacity-50 pointer-events-none" />
+      <Particles count={15} />
 
       <Link
         to="/"

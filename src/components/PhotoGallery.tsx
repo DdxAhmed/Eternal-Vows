@@ -95,6 +95,8 @@ export function PhotoGallery() {
                   <img
                     src={img.src}
                     alt={img.alt}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    decoding="async"
                     className="h-full w-full object-cover animate-ken-burns"
                   />
                 )}

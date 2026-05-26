@@ -10,19 +10,22 @@ type P = {
   opacity: number;
 };
 
-export function Particles({ count = 35 }: { count?: number }) {
+export function Particles({ count = 15 }: { count?: number }) {
   const [particles, setParticles] = useState<P[]>([]);
 
   useEffect(() => {
+    // Reduce count on mobile/low-power devices
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const effectiveCount = isMobile ? Math.floor(count / 2) : count;
     setParticles(
-      Array.from({ length: count }).map((_, i) => ({
+      Array.from({ length: effectiveCount }).map((_, i) => ({
         id: i,
         left: Math.random() * 100,
-        size: 2 + Math.random() * 5,
-        duration: 12 + Math.random() * 18,
+        size: 2 + Math.random() * 4,
+        duration: 14 + Math.random() * 16,
         delay: -Math.random() * 20,
-        drift: (Math.random() - 0.5) * 200,
-        opacity: 0.3 + Math.random() * 0.6,
+        drift: (Math.random() - 0.5) * 150,
+        opacity: 0.25 + Math.random() * 0.5,
       })),
     );
   }, [count]);
@@ -38,10 +41,11 @@ export function Particles({ count = 35 }: { count?: number }) {
             width: `${p.size}px`,
             height: `${p.size}px`,
             background: "radial-gradient(circle, #f4d98a 0%, rgba(244,217,138,0) 70%)",
-            boxShadow: "0 0 8px rgba(244, 217, 138, 0.8)",
+            boxShadow: "0 0 6px rgba(244, 217, 138, 0.7)",
             animation: `float-particle ${p.duration}s linear ${p.delay}s infinite`,
             ["--drift" as never]: `${p.drift}px`,
             opacity: p.opacity,
+            willChange: "transform, opacity",
           }}
         />
       ))}
