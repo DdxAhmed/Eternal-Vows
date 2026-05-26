@@ -44,7 +44,7 @@ function Invitation() {
         {isPlaying ? <Music2 className="h-5 w-5 animate-pulse" /> : <VolumeX className="h-5 w-5" />}
       </button>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 space-y-32">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 py-16 sm:py-24 space-y-20 sm:space-y-32">
         <Couple />
         <LoveStory />
         <Timeline />
@@ -63,25 +63,27 @@ function Invitation() {
 function Couple() {
   return (
     <section className="text-center animate-fade-up">
-      <p className="font-script text-2xl text-[#c4954a]">We are delighted to invite you to celebrate the engagement of</p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-10">
-        <h1 className="gold-gradient-text font-serif text-6xl sm:text-8xl italic leading-none">
+      <p className="font-script text-xl sm:text-2xl text-[#c4954a] px-2">
+        We are delighted to invite you to celebrate the engagement of
+      </p>
+      <div className="mt-6 sm:mt-8 flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-10">
+        <h1 className="gold-gradient-text font-serif text-5xl sm:text-7xl md:text-8xl italic leading-none">
           Kareem
         </h1>
-        <span className="font-script text-5xl text-[#2a1d10]">&</span>
-        <h1 className="gold-gradient-text font-serif text-6xl sm:text-8xl italic leading-none">
+        <span className="font-script text-4xl sm:text-5xl text-[#2a1d10]">&</span>
+        <h1 className="gold-gradient-text font-serif text-5xl sm:text-7xl md:text-8xl italic leading-none">
           Nouran
         </h1>
       </div>
-      <div className="mt-10">
+      <div className="mt-8 sm:mt-10">
         <Divider />
       </div>
-      <p className="mt-8 font-serif italic text-lg text-[#5a4530]">
+      <p className="mt-6 sm:mt-8 font-serif italic text-base sm:text-lg text-[#5a4530] px-4">
         "Two hearts bound by the beautiful bond of eternity."
       </p>
 
       {/* Countdown timer component */}
-      <div className="mt-10">
+      <div className="mt-8 sm:mt-10">
         <Countdown />
       </div>
     </section>
@@ -91,15 +93,15 @@ function Couple() {
 function LoveStory() {
   return (
     <section className="reveal text-center">
-      <h2 className="font-script text-5xl text-[#c4954a]">Our Love Story</h2>
+      <h2 className="font-script text-4xl sm:text-5xl text-[#c4954a]">Our Love Story</h2>
       <div className="mt-4">
         <Divider />
       </div>
-      <div className="mx-auto mt-10 max-w-2xl glass-card rounded-3xl p-10 sm:p-14">
-        <p className="font-serif text-xl sm:text-2xl leading-relaxed text-[#3a2a18] italic">
+      <div className="mx-auto mt-8 sm:mt-10 max-w-2xl glass-card rounded-3xl p-6 sm:p-10 md:p-14">
+        <p className="font-serif text-base sm:text-xl md:text-2xl leading-relaxed text-[#3a2a18] italic">
           Our story began with a simple glance across a candlelit room — a quiet hello that blossomed into shared laughter, whispered dreams, and a thousand beautiful adventures.
         </p>
-        <p className="mt-6 font-serif text-lg leading-relaxed text-[#5a4530]">
+        <p className="mt-4 sm:mt-6 font-serif text-sm sm:text-lg leading-relaxed text-[#5a4530]">
           Through golden mornings and starlit nights, across changing seasons and quiet storms, we discovered that love is not a single moment, but a gentle, steady turning toward one another. Today, we begin our most beautiful chapter yet — together, forever.
         </p>
       </div>
@@ -117,34 +119,34 @@ function EventDetails() {
   return (
     <section className="reveal">
       <div className="text-center">
-        <h2 className="font-script text-5xl text-[#c4954a]">The Engagement Details</h2>
+        <h2 className="font-script text-4xl sm:text-5xl text-[#c4954a]">The Engagement Details</h2>
         <div className="mt-4">
           <Divider />
         </div>
       </div>
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4">
         {details.map((d, i) => (
           <div
             key={d.label}
-            className="glass-card group rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(212,168,87,0.5)]"
+            className="glass-card group rounded-2xl p-5 sm:p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(212,168,87,0.5)]"
             style={{ animationDelay: `${i * 0.1}s` }}
           >
-            <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-[#f4d98a] to-[#d4a857] text-[#2a1d10] shadow-lg transition group-hover:scale-110 group-hover:rotate-6">
-              <d.icon className="h-7 w-7" />
+            <div className="mx-auto grid h-12 w-12 sm:h-16 sm:w-16 place-items-center rounded-full bg-gradient-to-br from-[#f4d98a] to-[#d4a857] text-[#2a1d10] shadow-lg transition group-hover:scale-110 group-hover:rotate-6">
+              <d.icon className="h-5 w-5 sm:h-7 sm:w-7" />
             </div>
-            <p className="mt-5 text-xs uppercase text-[#a8762f]">{d.label}</p>
-            <p className="mt-3 font-serif text-2xl text-[#2a1d10]">{d.value}</p>
-            <p className="mt-1 text-sm text-[#5a4530] italic">{d.sub}</p>
+            <p className="mt-3 sm:mt-5 text-xs uppercase text-[#a8762f]">{d.label}</p>
+            <p className="mt-2 sm:mt-3 font-serif text-lg sm:text-2xl text-[#2a1d10]">{d.value}</p>
+            <p className="mt-1 text-xs sm:text-sm text-[#5a4530] italic">{d.sub}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-10 text-center">
+      <div className="mt-8 sm:mt-10 text-center">
         <a
           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Engagement+of+Kareem+%26+Nouran&dates=20260626T170000Z/20260626T230000Z&details=We+are+delighted+to+invite+you+to+celebrate+the+engagement+of+Kareem+%26+Nouran+at+Bedaya+Hall.&location=Bedaya+Hall"
           target="_blank"
           rel="noreferrer"
-          className="glow-button inline-flex items-center gap-3 rounded-full px-8 py-3.5 text-sm font-medium uppercase transition hover:scale-105"
+          className="glow-button inline-flex items-center gap-3 rounded-full px-6 sm:px-8 py-3 sm:py-3.5 text-xs sm:text-sm font-medium uppercase transition hover:scale-105"
         >
           <Calendar className="h-4 w-4" /> Add to Google Calendar
         </a>
@@ -156,14 +158,14 @@ function EventDetails() {
 function GuestMessage() {
   return (
     <section className="reveal text-center">
-      <div className="mx-auto max-w-3xl glass-card rounded-3xl p-12 sm:p-16">
-        <Heart className="mx-auto h-10 w-10 text-[#d4a857] animate-pulse" fill="currentColor" />
-        <p className="mt-6 font-serif text-2xl sm:text-3xl italic leading-relaxed text-[#3a2a18]">
+      <div className="mx-auto max-w-3xl glass-card rounded-3xl p-6 sm:p-12 md:p-16">
+        <Heart className="mx-auto h-8 w-8 sm:h-10 sm:w-10 text-[#d4a857] animate-pulse" fill="currentColor" />
+        <p className="mt-4 sm:mt-6 font-serif text-lg sm:text-2xl md:text-3xl italic leading-relaxed text-[#3a2a18]">
           "Your presence will add a special joy to our celebration.
           <br />
           We are honored and overjoyed to share this beautiful day with you."
         </p>
-        <p className="mt-8 font-script text-3xl text-[#c4954a]">With all our love, Kareem & Nouran</p>
+        <p className="mt-5 sm:mt-8 font-script text-2xl sm:text-3xl text-[#c4954a]">With all our love, Kareem & Nouran</p>
       </div>
     </section>
   );
@@ -172,12 +174,12 @@ function GuestMessage() {
 function Location() {
   return (
     <section className="reveal text-center">
-      <h2 className="font-script text-5xl text-[#c4954a]">The Location</h2>
+      <h2 className="font-script text-4xl sm:text-5xl text-[#c4954a]">The Location</h2>
       <div className="mt-4">
         <Divider />
       </div>
-      <div className="mt-10 overflow-hidden rounded-3xl glass-card p-2">
-        <div className="relative h-72 sm:h-96 overflow-hidden rounded-2xl">
+      <div className="mt-8 sm:mt-10 overflow-hidden rounded-3xl glass-card p-2">
+        <div className="relative h-56 sm:h-72 md:h-96 overflow-hidden rounded-2xl">
           <iframe
             title="Venue Location"
             src="https://www.openstreetmap.org/export/embed.html?bbox=30.43%2C31.01%2C30.51%2C31.07&layer=mapnik"
@@ -190,7 +192,7 @@ function Location() {
         href="https://maps.app.goo.gl/KHMunwz1We3q8QC78"
         target="_blank"
         rel="noreferrer"
-        className="glow-button mt-10 inline-flex items-center gap-3 rounded-full px-10 py-4 text-sm font-medium uppercase"
+        className="glow-button mt-6 sm:mt-10 inline-flex items-center gap-3 rounded-full px-7 sm:px-10 py-3 sm:py-4 text-sm font-medium uppercase"
       >
         <MapPin className="h-4 w-4" /> View on Google Maps
       </a>

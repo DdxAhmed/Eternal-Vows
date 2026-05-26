@@ -50,7 +50,7 @@ export function Countdown() {
   }
 
   return (
-    <div className="flex justify-center gap-4 sm:gap-6 mt-8 animate-fade-in">
+    <div className="flex justify-center gap-2 sm:gap-6 mt-8 animate-fade-in">
       {[
         { label: "Days", value: timeLeft.days },
         { label: "Hours", value: timeLeft.hours },
@@ -58,14 +58,14 @@ export function Countdown() {
         { label: "Seconds", value: timeLeft.seconds },
       ].map((item) => (
         <div key={item.label} className="flex flex-col items-center">
-          <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full glass-card flex items-center justify-center border-2 border-[#d4a857]/40 transition-all duration-500 hover:border-[#d4a857] hover:scale-105 hover:shadow-[0_0_25px_rgba(212,168,87,0.35)] cursor-pointer group">
+          <div className="relative h-16 w-16 sm:h-24 sm:w-24 rounded-full glass-card flex items-center justify-center border-2 border-[#d4a857]/40 transition-all duration-500 hover:border-[#d4a857] hover:scale-105 hover:shadow-[0_0_25px_rgba(212,168,87,0.35)] cursor-pointer group">
             {/* Elegant inner circle line */}
             <div className="absolute inset-1.5 rounded-full border border-dashed border-[#d4a857]/20 group-hover:border-[#d4a857]/40 transition-all duration-500 group-hover:rotate-45" />
-            <span className="font-serif text-2xl sm:text-3xl gold-gradient-text font-bold z-10">
+            <span className="font-serif text-xl sm:text-3xl gold-gradient-text font-bold z-10">
               {String(item.value).padStart(2, "0")}
             </span>
           </div>
-          <span className="mt-3 text-xs uppercase tracking-widest text-[#a8762f] font-sans font-semibold">
+          <span className="mt-2 sm:mt-3 text-[10px] sm:text-xs uppercase tracking-widest text-[#a8762f] font-sans font-semibold">
             {item.label}
           </span>
         </div>
