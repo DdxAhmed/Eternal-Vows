@@ -201,7 +201,7 @@ function Location() {
 function Timeline() {
   const steps = [
     {
-      date: "March 22, 2025",
+      date: "March 22, 2026",
       titleAr: "أول لقاء جمعنا",
       titleEn: "Our First Meet",
       descAr: "حين التقت أعيننا للمرة الأولى وتبدلت الكلمات البسيطة إلى حديث لا ينتهي ومشاعر صادقة.",
